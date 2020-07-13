@@ -32,7 +32,7 @@ Need to upload two files : meta.tsv (words) and vecs.tsv (embeddings)
 	
 	After tweak of some params, like reduce in max_len and embedding dimension, loss curve flatten. However, accuracy decreases.
 	
-	[!after_tweak.png]
+	![alt text](after_tweak.png)
 
 9) Tensorflow Links:
 	A) https://www.tensorflow.org/datasets/api_docs/python/tfds/features/text/SubwordTextEncoder
