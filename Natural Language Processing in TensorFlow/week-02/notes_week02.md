@@ -25,6 +25,14 @@ Need to upload two files : meta.tsv (words) and vecs.tsv (embeddings)
 
 8) In Model Summary, 
 	A) No. of params in Embedding Layer is = Vocab size * Embedding dimension
+	
+	B) Loss curve shouldn't be sharp, it should be flatten.
+	See before tweak of params
+	[!before_tweak.png]
+	
+	After tweak of some params, like reduce in max_len and embedding dimension, loss curve flatten. However, accuracy decreases.
+	
+	[!after_tweak.png]
 
 9) Tensorflow Links:
 	A) https://www.tensorflow.org/datasets/api_docs/python/tfds/features/text/SubwordTextEncoder
@@ -37,5 +45,5 @@ Need to upload two files : meta.tsv (words) and vecs.tsv (embeddings)
 
 10) sparse_categorical_crossentropy Vs categorical_crossentropy
 
-## if your targets are integers, use sparse_categorical_crossentropy else
-## If your targets are one-hot encoded, use categorical_crossentropy
+### if your targets are integers, use sparse_categorical_crossentropy else
+### If your targets are one-hot encoded, use categorical_crossentropy
