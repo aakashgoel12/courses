@@ -28,7 +28,7 @@ Need to upload two files : meta.tsv (words) and vecs.tsv (embeddings)
 	
 	B) Loss curve shouldn't be sharp, it should be flatten.
 	See before tweak of params
-	[!before_tweak.png]
+	![alt text](before_tweak.png)
 	
 	After tweak of some params, like reduce in max_len and embedding dimension, loss curve flatten. However, accuracy decreases.
 	
