@@ -1,3 +1,8 @@
+Jupyter NB
+	1) https://nbviewer.jupyter.org/github/aakashgoel12/courses/blob/master/Natural%20Language%20Processing%20in%20TensorFlow/week-02/Copy_of_Course_3_Week_2_Exercise_Answer.ipynb
+	
+	2) 
+
 1) Tensorflow data services (tfds)
 	
 	pip install -q tensorflow-datasets
