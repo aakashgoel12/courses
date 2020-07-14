@@ -5,10 +5,15 @@ Week -04 :: Text Generation
 
 2) Process
 	Link for english songs: https://storage.googleapis.com/laurencemoroney-blog.appspot.com/irish-lyrics-eof.txt
+	
 	A) Take all corpus in one string, say english poems
+	
 	B) Split Corpus into sentences and all in lower case
+	
 	C) Fit tokenizer on it i.e. tokenizer.fit_on_texts
+	
 	D) create input sequences
+		
 		i) Pass each sentence via texts_to_sequences i.e. get list of indexes 
 		ii) Create ngram out of it
 		iii) do pad_sequences on ngram to make of equal length with padding = 'pre'
@@ -24,14 +29,20 @@ See code file (Copy of Course 3 - Week 4 - Lesson 1 - Notebook.ipynb OR copy_of_
 3) Model Example
 
 	model = Sequential()
+	
 	model.add(Embedding(total_words, 64, input_length=max_sequence_len-1))
+	
 	## here if use LSTM only, forward context only matters not backward. "big dog" makes sense but not "dog big".  
 	model.add(Bidirectional(LSTM(20)))
+	
 	model.add(Dense(total_words, activation='softmax'))
+	
 	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+	
 	history = model.fit(xs, ys, epochs=500, verbose=1)
 
 Hyperparam Tune in above model like:
+	
 	A) Embedding dimension from 64 to 300..
 	B) LSTM units
 	C) Adam Learning rate like --> adam = Adam(lr = 0.1) and pass optimizer as adam not 'adam'
@@ -47,11 +58,19 @@ Model:
 --------------
 
 model = Sequential()
+
 model.add(Embedding(total_words, 100, input_length=max_sequence_len-1))
+
 model.add(Bidirectional(LSTM(150, return_sequences = True)))
+
 model.add(Dropout(0.2))
+
 model.add(LSTM(100))
+
 model.add(Dense(total_words/2, activation='relu', kernel_regularizer=regularizers.l2(0.01)))
+
 model.add(Dense(total_words, activation='softmax'))
+
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
 print(model.summary())
