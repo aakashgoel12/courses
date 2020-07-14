@@ -17,6 +17,8 @@ Week -04 :: Text Generation
 	then Xs will be of 9 length and label will be last word index
 	To create labels, use to_categorical from Keras which convert every label in to list of size total words and 1 at index of label value and rest will be 0. (one hot encoding of labels)
 
+![alt text](creating_labels.png)
+
 See code file (Copy of Course 3 - Week 4 - Lesson 1 - Notebook.ipynb OR copy_of_course_3_week_4_lesson_1_notebook.py)
 
 3) Model Example
