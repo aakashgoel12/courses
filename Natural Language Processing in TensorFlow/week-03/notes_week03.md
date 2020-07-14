@@ -91,18 +91,28 @@ def fn(model):
 	![alt text](training_accuracy_1LSTM.png)
 
 	model = tf.keras.Sequential([
+	
     tf.keras.layers.Embedding(tokenizer.vocab_size, 16),
+    
     tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(32)),
+    
     tf.keras.layers.Dense(64, activation='relu'),
+    
     tf.keras.layers.Dense(1, activation='sigmoid')])
 
-    2 Layer LSTM: 
+    2 Layer LSTM:
+    
 	model = tf.keras.Sequential([
     tf.keras.layers.Embedding(tokenizer.vocab_size, 64),
+    
     tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64, return_sequences=True)),
+    
     tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(32)),
+    
     tf.keras.layers.Dense(64, activation='relu'),
+    
     tf.keras.layers.Dense(1, activation='sigmoid')])
+    
     ![alt text](training_accuracy_2LSTM.png)
 
 8) Without And with LSTM code and result
@@ -119,14 +129,17 @@ def fn(model):
 ---------------------
 
 Copy_of_Course_3_Week_3_Lesson_1*.ipynb contains code on IMDB
+	
 	A) Lesson_1a -> Single Bidirectional LSTM
 	B) Lesson_1b -> Two Bidirectional LSTM
 	C) Lesson_1c -> Convolution
 	D) Lesson_2d -> 
 	E) Week 3 Exercise Answer -> Stanford Sentiment Dataset (GLOVE + Conv1D + LSTM)
 	=========
+	
 	model = tf.keras.Sequential([
     tf.keras.layers.Embedding(vocab_size+1, embedding_dim, input_length=max_length, weights=[embeddings_matrix], trainable=False),
+    
     tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Conv1D(64, 5, activation='relu'),
     tf.keras.layers.MaxPooling1D(pool_size=4),
@@ -139,5 +152,6 @@ Copy_of_Course_3_Week_3_Lesson_1*.ipynb contains code on IMDB
 10) Reasons for the overfitting in this notebooks
 
 	A) Small training dataset size (small number of words) -> Embeddings derived from this may be over generalized also.
+	
 	B) 
 
