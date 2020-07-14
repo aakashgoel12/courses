@@ -17,8 +17,11 @@ If we just look sequence of words, we might loose context.
 
 	Input size `m` and no of LSTM o/p units `n`, Params = 4*(mn+n^2+n)
 	https://dejanbatanjac.github.io/2019/02/12/Number-of-parameters-in-Keras-LSTM.html
+	
 	https://www.dlology.com/blog/how-to-use-return_state-or-return_sequences-in-keras/
+	
 	https://machinelearningmastery.com/return-sequences-and-return-states-for-lstms-in-keras/
+	
 	https://stackabuse.com/solving-sequence-problems-with-lstm-in-keras/
 
 	W = (no of LSTM cell)*(4)*(input shape)
